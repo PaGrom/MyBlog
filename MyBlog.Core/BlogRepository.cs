@@ -35,6 +35,15 @@ namespace MyBlog.Core
                   .OrderByDescending(p => p.PostedOn)
                   .FetchMany(p => p.Tags)
                   .ToList();
+
+            /*return _session.Query<Post>()
+                                  .Where(p => p.Published)
+                                  .OrderByDescending(p => p.PostedOn)
+                                  .Skip(pageNo * pageSize)
+                                  .Take(pageSize)
+                                  .Fetch(p => p.Category)
+                                  .FetchMany(p => p.Tags)
+                                  .ToList();*/
         }
 
         public int TotalPosts()
