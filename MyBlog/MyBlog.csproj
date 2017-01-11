@@ -145,12 +145,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\themes\simple\admin.css" />
+    <Content Include="Content\themes\simple\images\arrow.png" />
+    <Content Include="Content\themes\simple\images\back.png" />
+    <Content Include="Content\themes\simple\images\bullet.png" />
+    <Content Include="Content\themes\simple\images\graphic.png" />
+    <Content Include="Content\themes\simple\images\link.png" />
+    <Content Include="Content\themes\simple\images\logo.jpg" />
+    <Content Include="Content\themes\simple\images\logo.png" />
+    <Content Include="Content\themes\simple\images\search.png" />
+    <Content Include="Content\themes\simple\images\tabs.png" />
+    <Content Include="Content\themes\simple\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionLinkExtensions.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,6 +176,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Blog\List.cshtml" />
+    <Content Include="Views\Shared\_PostTemplate.cshtml" />
+    <Content Include="App_Code\Helpers.cshtml" />
+    <Content Include="Views\Shared\_Pager.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -172,7 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyBlog.Core\MyBlog.Core.csproj">
