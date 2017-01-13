@@ -15,7 +15,15 @@ namespace MyBlog.Models
             TotalPosts = _blogRepository.TotalPosts();
         }
 
+        public ListViewModel(IBlogRepository blogRepository, string categorySlug, int pageNumber)
+        {
+            Posts = blogRepository.PostsForCategory(categorySlug, pageNumber - 1, 10);
+            TotalPosts = blogRepository.TotalPostsForCategory(categorySlug);
+            Category = blogRepository.Category(categorySlug);
+        }
+
         public IList<Post> Posts { get; private set; }
         public int TotalPosts { get; private set; }
+        public Category Category { get; private set; }
     }
 }
