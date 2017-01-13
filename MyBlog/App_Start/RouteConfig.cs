@@ -24,6 +24,12 @@ namespace MyBlog
                 url: "Category/{category}",
                 defaults: new { controller = "Blog", action = "Category" }
             );
+
+            routes.MapRoute(
+                name: "Tag",
+                url: "Tag/{tag}",
+                defaults: new { controller = "Blog", action = "Tag" }
+            );
         }
     }
 }
