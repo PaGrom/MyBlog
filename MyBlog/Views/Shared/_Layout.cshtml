@@ -41,11 +41,14 @@
         <div id="site_content">
             @Html.Partial("_Search")
             @RenderBody()
+
+            @* Call the child action to render the sidebar *@
+            @Html.Action("Sidebars")
         </div>
 
         <!-- Footer -->
         <div id="footer">
-            Copyright ï¿½ @DateTime.Now.Year JustBlog All Rights Reserved
+            Copyright @DateTime.Now.Year MyBlog All Rights Reserved
         </div>
     </div>
 </body>

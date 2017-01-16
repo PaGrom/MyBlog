@@ -157,5 +157,10 @@ namespace MyBlog.Core
 
             return query.ToFuture().Single();
         }
+
+        public IList<Category> Categories()
+        {
+            return _session.Query<Category>().OrderBy(p => p.Name).ToList();
+        }
     }
 }
