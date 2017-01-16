@@ -30,6 +30,12 @@ namespace MyBlog
                 url: "Tag/{tag}",
                 defaults: new { controller = "Blog", action = "Tag" }
             );
+
+            routes.MapRoute(
+                name: "Post",
+                url: "Archive/{year}/{month}/{title}",
+                defaults: new { controller = "Blog", action = "Post" }
+            );
         }
     }
 }
